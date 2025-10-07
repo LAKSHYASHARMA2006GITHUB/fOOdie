@@ -1,6 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom';
 const Header = () => {
+
+  const[menu,setMenu] = useState("home");
+
   return (
     <div className='header'>
       <div className="header-content">
@@ -8,7 +12,7 @@ const Header = () => {
         <p>Order the best delicious item from here in just minutes of hunger.
             Don't worry we are here for kill your hunger! fOOdie
         </p>
-        <button>View Menu</button>
+        <Link to="/explore-menu"><button>View Menu</button></Link> 
       </div>
     </div>
   )
